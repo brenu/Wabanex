@@ -4,12 +4,12 @@ defmodule Wabanex.User do
 
   @primary_key {:id, :binary_id, autogenerate: true}
 
-  @fields [:email,:password,:name]
+  @fields [:email, :password, :name]
 
   schema "users" do
-    field :email, :string
-    field :name, :string
-    field :password, :string
+    field :email, :string, null: false
+    field :name, :string, null: false
+    field :password, :string, null: false
 
     timestamps()
   end
